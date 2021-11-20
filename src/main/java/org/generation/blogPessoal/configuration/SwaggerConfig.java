@@ -1,4 +1,4 @@
-package com.BlogPessoal.App.configuration;
+package org.generation.blogPessoal.configuration;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +22,7 @@ public class SwaggerConfig {
 	@Bean
 	public Docket api() {
 		return new Docket(DocumentationType.SWAGGER_2).select()
-				.apis(RequestHandlerSelectors.basePackage("com.BlogPessoal.App.controller"))
+				.apis(RequestHandlerSelectors.basePackage("org.generation.blogPessoal.controller"))
 				.paths(PathSelectors.any()).build().apiInfo(metadata()).useDefaultResponseMessages(false)
 				.globalResponses(HttpMethod.GET, responseMessage()).globalResponses(HttpMethod.POST, responseMessage())
 				.globalResponses(HttpMethod.PUT, responseMessage())
