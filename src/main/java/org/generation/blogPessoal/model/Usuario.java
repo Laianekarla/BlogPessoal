@@ -56,6 +56,8 @@ public class Usuario {
 	public void setMinhasPostagens(List<Postagem> minhasPostagens) {
 		this.minhasPostagens = minhasPostagens;
 	}
+	
+	public Usuario() {} //CONSTRUTOR VAZIO.
 
 	public Usuario(String nome, String usuario, String senha) {
 	this.nome = nome;
