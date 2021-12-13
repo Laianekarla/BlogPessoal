@@ -25,7 +25,11 @@ public class Postagem {
 
 	@NotNull
 	@Size(min = 5, max = 100)
-	private String descricao;
+	private String titulo;
+
+	@NotNull
+	@Size(min = 10, max = 500)
+	private String texto;
 
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date date = new java.sql.Date(System.currentTimeMillis());
@@ -41,12 +45,22 @@ public class Postagem {
 	
 
 	
-	public String getDescricao() {
-		return descricao;
+	
+
+	public String getTitulo() {
+		return titulo;
 	}
 
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+	public String getTexto() {
+		return texto;
+	}
+
+	public void setTexto(String texto) {
+		this.texto = texto;
 	}
 
 	public Usuario getUsuario() {
